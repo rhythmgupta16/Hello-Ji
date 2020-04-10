@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
+import com.google.android.gms.common.SignInButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -45,6 +46,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         btnfb = (Button) findViewById(R.id.login_button);
 
         String way = getIntent().getStringExtra("method");
+        Toast.makeText(getApplicationContext(), ""+way,Toast.LENGTH_SHORT).show();
         if(firebaseAuth.getCurrentUser() != null)
         {
             way = ""+0;
@@ -77,6 +79,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         {
             btnLogOut.setVisibility(View.INVISIBLE);
         }
+
 
 
 
@@ -127,7 +130,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             //closing activity
             finish();
             //starting login activity
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
         }
     }
 }
