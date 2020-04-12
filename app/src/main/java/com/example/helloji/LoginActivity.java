@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -145,6 +144,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnSignIn.setOnClickListener(this);
         tvSignUp.setOnClickListener(this);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+
+    }
+
 
     //method for user login
     private void userLogin(){

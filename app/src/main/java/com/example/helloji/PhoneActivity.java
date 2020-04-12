@@ -46,7 +46,6 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         btnfb = (Button) findViewById(R.id.login_button);
 
         String way = getIntent().getStringExtra("method");
-        Toast.makeText(getApplicationContext(), ""+way,Toast.LENGTH_SHORT).show();
         if(firebaseAuth.getCurrentUser() != null)
         {
             way = ""+0;
@@ -81,12 +80,17 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         }
 
 
-
-
         //adding listener to button
         btnContinue.setOnClickListener(this);
         btnLogOut.setOnClickListener(this);
         btnfb.setOnClickListener(this);
+
+    }
+    public void onBackPressed(){
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
 
     }
 

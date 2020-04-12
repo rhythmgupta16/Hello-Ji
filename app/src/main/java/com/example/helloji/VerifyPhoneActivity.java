@@ -68,6 +68,14 @@ public class VerifyPhoneActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), PhoneActivity.class);
+        startActivity(intent);
+
+    }
+
     //the method is sending verification code
     //the country id is concatenated
     //you can take the country id as user input as well

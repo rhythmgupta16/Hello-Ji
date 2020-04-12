@@ -151,6 +151,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvSignIn.setOnClickListener(this);
     }
 
+    public void onBackPressed(){
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
+
+    }
+
     //google
     @Override
     protected void onStart() {
