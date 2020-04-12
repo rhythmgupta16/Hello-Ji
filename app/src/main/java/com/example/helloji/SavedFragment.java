@@ -64,9 +64,6 @@ public class SavedFragment extends Fragment
         View view = inflater.inflate(R.layout.fragment_saved, container, false);
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        mTextViewEmpty = (TextView)view.findViewById(R.id.textViewEmpty);
-        mImageViewEmpty = (ImageView)view.findViewById(R.id.imageViewEmpty);
-        mProgressBarLoading = (ProgressBar)view.findViewById(R.id.progressBarLoading);
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
