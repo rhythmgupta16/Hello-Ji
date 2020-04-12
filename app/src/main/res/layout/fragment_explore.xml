@@ -6,12 +6,12 @@
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search"
+        android:background="@drawable/searchview_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:backgroundTint="@color/colorAccent"
         android:clickable="true" />
 
     <androidx.recyclerview.widget.RecyclerView

@@ -58,6 +58,8 @@ public class ExploreFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
+        getActivity().setTitle("Explore #tags");
+
         View view = inflater.inflate(R.layout.fragment_explore, container, false);
         search = (SearchView) view.findViewById(R.id.search);
         search.setQueryHint("Search By Tags");

@@ -71,6 +71,8 @@ public class TrendingFragment extends ListFragment implements AdapterView.OnItem
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        getActivity().setTitle("Trending Now");
+
         return inflater.inflate(R.layout.fragment_trending, container, false);
     }
 
