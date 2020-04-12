@@ -5,4 +5,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Tags">
+        <item>#techmonday</item>
+        <item>#covid-19</item>
+        <item>#fifa cup</item>
+        <item>#lockdown</item>
+        <item>#foodie</item>
+        <item>#guruji</item>
+        <item>#startups</item>
+    </string-array>
+
 </resources>
