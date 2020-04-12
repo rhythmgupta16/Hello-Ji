@@ -2,6 +2,7 @@ package com.example.helloji;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,11 +17,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-
-/**
- * A simple {@link Fragment} subclass.
- * create an instance of this fragment.
- */
 public class ExploreFragment extends Fragment
 {
 
@@ -39,6 +35,7 @@ public class ExploreFragment extends Fragment
     private ImageView mImageViewEmpty;
     private RecyclerView mRecyclerView;
     private ListAdapter mListadapter;
+    private SearchView search;
 
     public static ExploreFragment newInstance(String param1, String param2) {
         ExploreFragment fragment = new ExploreFragment();
@@ -62,7 +59,8 @@ public class ExploreFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_explore, container, false);
-
+        search = (SearchView) view.findViewById(R.id.search);
+        search.setQueryHint("Search By Tags");
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
 
 
